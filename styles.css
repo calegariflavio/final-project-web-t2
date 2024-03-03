@@ -259,6 +259,7 @@ footer {
       padding: 40px;
     }
   }
+}
   
   @media screen and (min-width: 1024px) {
     /* Adjust styles for larger screens, such as laptops and desktops */
