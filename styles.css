@@ -242,3 +242,26 @@ footer {
 .testimonial {
     margin-top: 40px;
 }
+
+
+/* Apply responsive styles using media queries */
+@media screen and (min-width: 768px) {
+    /* Adjust styles for tablets and larger screens */
+    nav {
+      display: flex;
+    }
+  
+    nav a {
+      margin-right: 10px;
+    }
+  
+    .container {
+      padding: 40px;
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+    /* Adjust styles for larger screens, such as laptops and desktops */
+    .container {
+      padding: 60px;
+    }
