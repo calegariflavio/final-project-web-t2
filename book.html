@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CoWorking Website</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body class="book-container">
 
     <!-- Navigator -->
     <nav>
         <a href="index.html" class="logo-container">
             <img src="images/logo.png" alt="Logo" class="logo">
-          </a>
+        </a>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="book.html">Book</a></li>
@@ -22,9 +24,55 @@
         </ul>
     </nav>
 
+
     <!-- Content -->
     <div class="content" id="book">
+
+        <div class="book-space">
+            <p class="openFormBtn" onclick="openForm()"">DO NOT WASTE YOUR TIME, CLICK HERE AND BOOK YOUR SPACE NOW!</p>
+        </div>
+
+        <div class=" listPhotos">
+            <div class="photoContainer">
+                <img class="photo" src="images/bg1.jpg" alt="Photo 1">
+                <img class="photo" src="images/img1.jpg" alt="Photo 2">
+                <img class="photo" src="images/img1.jpg"alt="Photo 3">
+                <img class="photo" src="images/bg1.jpg" alt="Photo 4">
+                <img class="photo" src="images/img1.jpg" alt="Photo 5">
+            </div>
+            <button class="prev" onclick="prevPhoto()">&#10094;</button>
+            <button class="next" onclick="nextPhoto()">&#10095;</button>
+        </div>
+
+
         <!-- Content of each page will be loaded here using jQuery -->
+
+        <div id="overlay"></div>
+
+        <!-- Form Container -->
+        <div id="formContainer" class="form-container">
+            <span class="close-button" onclick="closeForm()">&times;</span>
+
+            <h2>Book Your Space</h2>
+            <form>
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required>
+
+                <label for="priceRange">Maximum Price:</label>
+                <input type="range" id="priceRange" name="priceRange" min="100" max="1000" value="500" required>
+                <span id="priceOutput">$500.00</span> <!-- Display the selected value -->
+
+                <label for="seatsAvailable">Seats Available:</label>
+                <input type="number" id="seatsAvailable" name="seatsAvailable" min="1" required>
+
+                <label for="dateTimeSlot">Date and Time Slot:</label>
+                <input type="datetime-local" id="dateTimeSlot" name="dateTimeSlot" required>
+
+            </form>
+            <!-- Add your form fields here -->
+            <button class="cancel-button" onclick="closeForm()">Cancel</button>
+        </div>
+        
     </div>
 
     <!-- Footer -->
@@ -37,4 +85,5 @@
     <!-- Your JavaScript file -->
     <script src="script.js"></script>
 </body>
+
 </html>
